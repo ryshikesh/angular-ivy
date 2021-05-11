@@ -1,4 +1,41 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+Date :
+<h2> {{ currentDate }} </h2>
+<h2> {{ currentDate | date:'shortDate'}} </h2>
+
+<h2> {{ currentDate | date:'mediumDate'}} </h2>
+
+<h2> {{ currentDate | date:'longDate'}} </h2>
+
+<h2> {{ currentDate | date:'dd-MMM-yyyy'}} </h2>
+<h2> {{ currentDate | date:'dd/MMM/yyyy'}} </h2>
+<h2> {{ currentDate | date:'yyyy/MM/dd'}} </h2>
+
+<h2> {{ currentDate | date:'dd-MMM-yyyy h:mm:ss'}} </h2>
+
+<div [style.border-bottom]="'2px solid red'"> </div>
+
+Currency :
+
+<h2> {{ccyAmount | currency:'INR' }} </h2>
+<h2> {{ccyAmount | currency:'USD' }} </h2>
+<h2> {{ccyAmount | currency:'USD':'code' }} </h2>
+
+<div [style.border-bottom]="'2px solid red'"> </div>
+
+Text :
+
+<h2>{{'Shreya' | uppercase }}</h2>
+<h2>{{'Shreya' | lowercase }}</h2>
+
+
+<div [style.border-bottom]="'2px solid red'"> </div>
+
+Decimals :
+<h2>{{decimalAmount | number: '1.0-0'}}</h2>
+
+<div [style.border-bottom]="'2px solid red'"> </div>
+
+Percent :
+<p>A: {{sscMarks | percent}}</p>
+
+<p>B: {{sscMarks | percent:'2.3-5'}}</p>
